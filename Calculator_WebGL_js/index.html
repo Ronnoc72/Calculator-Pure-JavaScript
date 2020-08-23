@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets.css">
+    <meta charset="utf-8" />
+    <meta name="author" content="Connor Paxman" />
+    <meta name="keywords" content="Calculator, calc" />
+    <meta name="description" content="Calculator presonal project" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="calc-background">
+      <div class="calc-window" id="calc-window"></div>
+      <div class="calc-buttons">
+        <button name="num_buttons" onclick="num_1(screen, calc_window)" id ="num-1" style="border-right: none; border-bottom: none;">1</button>
+        <button name="num_buttons" onclick="num_2(screen, calc_window)" id ="num-2" style="border-bottom: none; border-left: none; border-right: none;">2</button>
+        <button name="num_buttons" onclick="num_3(screen, calc_window)" id ="num-3" style="border-left: none; border-bottom: none;">3</button>
+        <button name="num_buttons" onclick="num_4(screen, calc_window)" id ="num-4" style="border-top: none; border-right: none; border-bottom: none;">4</button>
+        <button name="num_buttons" onclick="num_5(screen, calc_window)" id ="num-5" style="border-left: none; border-right: none; border-top: none; border-bottom: none;">5</button>
+        <button name="num_buttons" onclick="num_6(screen, calc_window)" id ="num-6" style="border-left: none; border-top: none; border-bottom: none;">6</button>
+        <button name="num_buttons" onclick="num_7(screen, calc_window)" id ="num-7" style="border-top: none; border-right: none; border-bottom: none;">7</button>
+        <button name="num_buttons" onclick="num_8(screen, calc_window)" id ="num-8" style="border: none;">8</button>
+        <button name="num_buttons" onclick="num_9(screen, calc_window)" id ="num-9" style="border-top: none; border-left: none; border-bottom: none;">9</button>
+        <button name="num_buttons" onclick="num_plus1(screen, calc_window)" id ="num-+" style="border-top: none; border-bottom: none; border-right: none;">+</button>
+        <button name="num_buttons" onclick="num_0(screen, calc_window)" id ="num-0" style="border: none;">0</button>
+        <button name="num_buttons" onclick="num_sub1(screen, calc_window)" id ="num--" style="border-top: none; border-left: none; border-bottom: none;">-</button>
+        <button name="num_buttons" onclick="num_mult1(screen, calc_window)" id ="num-*" style="border-top: none; border-right: none; border-bottom: none;">*</button>
+        <button name="num_buttons" onclick="num_divide1(screen, calc_window)" id ="num-/" style="border-top: none; border-left: none; border-right: none;">/</button>
+        <button name="num_buttons" onclick="num_equal1(screen, calc_window)" id ="num-=" style="border-left: none; border-top: none;">=</button>
+        <button name="num_buttons" onclick="clear(screen, calc_window)" id ="num-c" style="border-top: none;">c</button>
+      </div>
+    </div>
+    <script>
+      var screen = [];
+      var i = 0;
+
+      var buttons = document.getElementsByName("num_button");
+      var calc_window = document.getElementById("calc-window");
+      var num1 = document.getElementById("num-1");
+      var num2 = document.getElementById("num-2");
+      var num3 = document.getElementById("num-3");
+      var num4 = document.getElementById("num-4");
+      var num5 = document.getElementById("num-5");
+      var num6 = document.getElementById("num-6");
+      var num7 = document.getElementById("num-7");
+      var num8 = document.getElementById("num-8");
+      var num9 = document.getElementById("num-9");
+      var num_plus = document.getElementById("num-+");
+      var num0 = document.getElementById("num-0");
+      var num_sub = document.getElementById("num--");
+      var num_mult = document.getElementById("num-*");
+      var num_divide = document.getElementById("num-/");
+      var num_equal = document.getElementById("num-=");
+      var text = document.createTextNode("6");
+
+      function clear(arr, x) {
+        var _emety = [];
+        arr = _emety;
+        x.innerHTML = arr;
+        return arr;
+      } 
+
+      function reverseString(str) {
+        var splitString = str.split("");
+        var reverseArray = splitString.reverse();
+        var joinArray = reverseArray.join("");
+        return joinArray; 
+      }
+
+      function num_1(arr, x) {
+        var letter = num1.innerHTML;
+        arr.push(letter);
+        console.log(arr);
+        x.innerHTML += arr[i];
+        i += 1;
+        return arr;
+      }
+
+      function num_2(arr, x) {
+        var letter = num2.innerHTML;
+        arr.push(letter);
+        console.log(arr);
+        x.innerHTML += arr[i];
+        i += 1;
+        return arr;
+      }
+
+      function num_3(arr, x) {
+        var letter = num3.innerHTML;
+        arr.push(letter);
+        console.log(arr);
+        x.innerHTML += arr[i];
+        i += 1;
+        return arr;
+      }
+
+      function num_4(arr, x) {
+        var letter = num4.innerHTML;
+        arr.push(letter);
+        console.log(arr);
+        x.innerHTML += arr[i];
+        i += 1;
+        return arr;
+      }
+
+      function num_5(arr, x) {
+        var letter = num5.innerHTML;
+        arr.push(letter);
+        console.log(arr);
+        x.innerHTML += arr[i];
+        i += 1;
+        return arr;
+      }
+
+      function num_6(arr, x) {
+        var letter = num6.innerHTML;
+        arr.push(letter);
+        console.log(arr);
+        x.innerHTML += arr[i];
+        i += 1;
+        return arr;
+      }
+
+      function num_7(arr, x) {
+        var letter = num7.innerHTML;
+        arr.push(letter);
+        console.log(arr);
+        x.innerHTML += arr[i];
+        i += 1;
+        return arr;
+      }
+
+      function num_8(arr, x) {
+        var letter = num8.innerHTML;
+        arr.push(letter);
+        console.log(arr);
+        x.innerHTML += arr[i];
+        i += 1;
+        return arr;
+      }
+
+      function num_9(arr, x) {
+        var letter = num9.innerHTML;
+        arr.push(letter);
+        console.log(arr);
+        x.innerHTML += arr[i];
+        i += 1;
+        return arr;
+      }
+
+      function num_plus1(arr, x) {
+        var letter = num_plus.innerHTML;
+        arr.push(letter);
+        console.log(arr);
+        x.innerHTML += arr[i];
+        i += 1;
+        return arr;
+      }
+
+      function num_0(arr, x) {
+        var letter = num0.innerHTML;
+        arr.push(letter);
+        console.log(arr);
+        x.innerHTML += arr[i];
+        i += 1;
+        return arr;
+      }
+
+      function num_sub1(arr, x) {
+        var letter = num_sub.innerHTML;
+        arr.push(letter);
+        console.log(arr);
+        x.innerHTML += arr[i];
+        i += 1;
+        return arr;
+      }
+
+      function num_mult1(arr, x) {
+        var letter = num_mult.innerHTML;
+        arr.push(letter);
+        console.log(arr);
+        x.innerHTML += arr[i];
+        i += 1;
+        return arr;
+      }
+
+      function num_divide1(arr, x) {
+        var letter = num_divide.innerHTML;
+        arr.push(letter);
+        console.log(arr);
+        x.innerHTML += arr[i];
+        i += 1;
+        return arr;
+      }
+
+      function num_equal1(arr, x) {
+        var temp = '';
+        var temp2 = '';
+        var arr2 = [];
+        var emety = [];
+        var num_temp;
+        var num_temp2;
+        var plus = false;
+        var sub = false;
+        var mult = false;
+        var divide = false;
+        if (arr.length == 1) {
+          return;
+        }
+        for (let j = 0; j < arr.length; j++) {
+          if (arr[j] == "+") {
+            plus = true;
+            for (let x = 0; x < j; x++) {
+              temp = temp + arr[x];
+            }
+            for (let y = arr.length - 1; y > j; y--) {
+              temp2 = temp2 + arr[y];
+            }
+          }
+
+          if (arr[j] == "-") {
+            sub = true;
+            for (let x = 0; x < j; x++) {
+              temp = temp + arr[x];
+            }
+            for (let y = arr.length - 1; y > j; y--) {
+              temp2 = temp2 + arr[y];
+            }
+          }
+
+          if (arr[j] == "*") {
+            mult = true;
+            for (let x = 0; x < j; x++) {
+              temp = temp + arr[x];
+            }
+            for (let y = arr.length - 1; y > j; y--) {
+              temp2 = temp2 + arr[y];
+            }
+          }
+
+          if (arr[j] == "/") {
+            divide = true;
+            for (let x = 0; x < j; x++) {
+              temp = temp + arr[x];
+            }
+            for (let y = arr.length - 1; y > j; y--) {
+              temp2 = temp2 + arr[y];
+            }
+          }
+        }
+
+        if (plus) {
+          num_temp = Number(temp);
+          num_temp2 = Number(reverseString(temp2));
+          arr.splice(0, arr.length);
+          arr += num_temp + num_temp2;
+          if (arr.length >= 7) {
+            for (let a = 0; a < 7; a++) {
+              arr2 += arr[a];
+            }
+            arr = emety;
+            arr = arr2;
+          }
+          x.innerHTML = arr;
+        }
+
+        if (sub) {
+          num_temp = Number(temp);
+          num_temp2 = Number(reverseString(temp2));
+          arr.splice(0, arr.length);
+          arr += num_temp - num_temp2;
+          if (arr.length >= 7) {
+            for (let a = 0; a < 7; a++) {
+              arr2 += arr[a];
+            }
+            arr = emety;
+            arr = arr2;
+          }
+          x.innerHTML = arr;
+        }
+
+        if (mult) {
+          num_temp = Number(temp);
+          num_temp2 = Number(reverseString(temp2));
+          arr.splice(0, arr.length);
+          arr += num_temp * num_temp2;
+          if (arr.length >= 7) {
+            for (let a = 0; a < 7; a++) {
+              arr2 += arr[a];
+            }
+            arr = emety;
+            arr = arr2;
+          }
+          x.innerHTML = arr;
+        }
+
+        if (divide) {
+          num_temp = Number(temp);
+          num_temp2 = Number(reverseString(temp2));
+          arr.splice(0, arr.length);
+          arr += num_temp / num_temp2;
+          if (arr.length >= 7) {
+            for (let a = 0; a < 7; a++) {
+              arr2 += arr[a];
+            }
+            arr = emety;
+            arr = arr2;
+          }
+          x.innerHTML = arr;
+        }
+        console.log(Number(arr));
+        screen.push(arr);
+        i = 1;
+      }     
+    </script>
+  </body>
+</html>
